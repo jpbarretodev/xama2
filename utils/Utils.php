@@ -6,11 +6,11 @@ class Utils {
         return json_decode($json);
     }
 
-    public static function string_to_date(string $date, ?int $hour): DateTime {
+    public static function date_to_string(DateTime $date, ?int $hour = null): string {
 
-        return $hour !== null
-        ? DateTime::createFromFormat("d/m/Y H:m", $date) // colocar depois para o horario do Amazonas
-        : DateTime::createFromFormat("d/m/Y", $date); // colocar depois para o horario do Amazonas
-    } 
+        return $hour !== null 
+        ? $date->format("d/m/Y") 
+        : $date->format("d/m/Y H:m");
+    }
 }
 ?>
