@@ -1,0 +1,2 @@
+# Redireciona tudo para o index.php mantendo os parâmetros (?cpf=123, etc.)
+RewriteRule ^ roteador.php [QSA,L]
