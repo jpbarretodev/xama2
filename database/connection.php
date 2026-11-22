@@ -2,21 +2,22 @@
 
 class DataBaseConnection {
 
-    private static ?mysqli $conn = null;
+    private static mixed $conn = null;
 
     public static function getConnection() {
 
-        if (self::$conn === null) {
-            self::$conn = mysqli_connect(
-                "localhost",
-                "root",
-                "",
-                "testebanco"
-            );
-        }
+        // if (self::$conn === null) {
+        //     self::$conn = mysqli_connect(
+        //         "localhost",
+        //         "root",
+        //         "",
+        //         "testecartorio"
+        //     );
+        // }
         
         return self::$conn;
     }
+
 }
 
 ?>
